@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ur-Latn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Khilona Ghar – Bachon ke khilone</title>
+<meta name="description" content="Bachon ke liye blocks, gaarian, puzzles, dolls aur bohat kuch. Poore Pakistan mein delivery.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="top">
+  <a class="brand" href="#top" aria-label="Khilona Ghar home">
+    <span class="brand-blocks" aria-hidden="true"><i></i><i></i><i></i></span>
+    Khilona Ghar
+  </a>
+  <nav aria-label="Main">
+    <a href="#shop">Shop</a>
+    <a href="#ages">Umar ke hisaab se</a>
+    <a href="#delivery">Delivery</a>
+    <a href="#contact">Rabta</a>
+  </nav>
+  <button class="cart-btn" id="openCart" aria-label="Cart kholein">
+    Cart <span id="cartCount">0</span>
+  </button>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Khelo, banao, seekho.</h1>
+      <p>Blocks, gaarian, puzzles aur dolls. Har khilona bachon ki umar ke hisaab se chuna gaya hai.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#shop">Khilone dekhein</a>
+        <a class="btn btn-ghost" href="#delivery">Delivery ki tafseel</a>
+      </div>
+    </div>
+    <div class="tower" aria-hidden="true">
+      <button class="blk b-red" tabindex="-1">K</button>
+      <button class="blk b-blue" tabindex="-1">H</button>
+      <button class="blk b-yellow" tabindex="-1">E</button>
+      <button class="blk b-green" tabindex="-1">L</button>
+      <button class="blk b-blue2" tabindex="-1">O</button>
+      <p class="tower-hint">Blocks par click karein</p>
+    </div>
+  </section>
+
+  <section id="shop" class="shop">
+    <div class="section-head">
+      <h2>Hamare khilone</h2>
+      <div class="filters" role="group" aria-label="Category filter">
+        <button class="chip active" data-cat="all">Sab</button>
+        <button class="chip" data-cat="blocks">Blocks</button>
+        <button class="chip" data-cat="gaarian">Gaarian</button>
+        <button class="chip" data-cat="puzzle">Puzzles</button>
+        <button class="chip" data-cat="dolls">Dolls</button>
+        <button class="chip" data-cat="outdoor">Outdoor</button>
+      </div>
+    </div>
+    <div class="grid" id="productGrid"></div>
+  </section>
+
+  <section id="ages" class="ages">
+    <h2>Umar ke hisaab se chunein</h2>
+    <div class="age-row">
+      <button class="age age-1" data-age="0-3"><strong>0–3 saal</strong><span>Naram aur mehfooz khilone</span></button>
+      <button class="age age-2" data-age="4-6"><strong>4–6 saal</strong><span>Blocks aur role-play</span></button>
+      <button class="age age-3" data-age="7-10"><strong>7–10 saal</strong><span>Puzzles aur robots</span></button>
+    </div>
+    <p class="age-note" id="ageNote">Ek umar chunein, hum us ke khilone upar dikha denge.</p>
+  </section>
+
+  <section id="delivery" class="delivery">
+    <h2>Delivery aur payment</h2>
+    <ul>
+      <li><strong>Poore Pakistan mein delivery.</strong> Islamabad, Rawalpindi mein 1–2 din, baqi shehron mein 3–5 din.</li>
+      <li><strong>Cash on delivery.</strong> Khilona mil jaye to payment karein.</li>
+      <li><strong>7 din mein exchange.</strong> Agar khilona kharab ho ya pasand na aye.</li>
+    </ul>
+  </section>
+</main>
+
+<footer id="contact" class="foot">
+  <div>
+    <h2>Khilona Ghar</h2>
+    <p>Aap ka order WhatsApp par confirm hota hai.</p>
+  </div>
+  <div>
+    <p><strong>WhatsApp:</strong> 0300 0000000</p>
+    <p><strong>Email:</strong> hello@khilonaghar.example</p>
+  </div>
+</footer>
+
+<div class="overlay" id="overlay" hidden></div>
+<aside class="drawer" id="drawer" aria-label="Aap ka cart" aria-hidden="true">
+  <div class="drawer-head">
+    <h2>Aap ka cart</h2>
+    <button class="close" id="closeCart" aria-label="Cart band karein">Band karein</button>
+  </div>
+  <div class="drawer-body" id="cartItems"></div>
+  <div class="drawer-foot">
+    <div class="total"><span>Kul</span><strong id="cartTotal">Rs 0</strong></div>
+    <a class="btn btn-primary full" id="checkout" href="#" target="_blank" rel="noopener">WhatsApp par order karein</a>
+  </div>
+</aside>
+
+<script src="script.js"></script>
+</body>
+</html>
